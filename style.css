@@ -1,0 +1,149 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+ 
+  font-family: "Poppins", sans-serif;
+  background-color: #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+ 
+
+}
+
+.weather-container {
+  width: 350px;
+  background-image: url(weather.jpg);
+
+  background: linear-gradient(rgba(29, 38, 113, 0.5), rgba(29, 3, 37, 0.6)), url("weather.jpg"); /* The least supported option. */
+
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+overflow:hidden;
+  padding: 1rem ;
+}
+
+
+
+.weather-container .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.weather-container .content .bigicon {
+  font-size: 6rem;
+  margin-top: 3rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.weather-container .content h2 {
+  font-family: inherit;
+  font-size: 4rem;
+  margin: 0;
+  font-weight: 600;
+  color: #fff;
+}
+
+.weather-container .content h3 {
+  font-family: inherit;
+  font-size: 2rem;
+  margin-top: -0.5rem;
+  font-weight: 600;
+  color: #fff;
+}
+.weather-container .content p {
+  font-family: inherit;
+  font-size: 1rem;
+  margin-top: -1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.weather-container form input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 2px solid #fff;
+  padding: 0.25rem 0.5rem;
+  width: 200px;
+  color: white;
+  margin-top: 2rem;
+}
+
+.weather-container form input.focus {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  border-bottom: 2px solid #fff;
+  padding: 0.25rem 0.5rem;
+  width: 200px;
+  color: white;
+  margin-top: 2rem;
+}
+
+.weather-container form input::placeholder {
+  text-align: center;
+  font-weight: 500;
+  color: white;
+  opacity:0.4;
+}
+
+.weather-container .bottom {
+  width: 70%;
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 180px;
+  bottom: 0;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.bottom-heading {
+  background-color: ivory;
+  color: #000 !important;
+  padding: 0.5rem;
+  margin: 0;
+  text-align: center;
+  border-radius: 15px 15px 0px 0px;
+}
+
+.time {
+  display: flex;
+  flex-direction: column;
+
+  padding: 1rem;
+}
+.time div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: -1.5rem;
+}
+.time div a {
+  text-decoration: none;
+  color: #000;
+}
+.time div i {
+  color: #fff;
+}
+span {
+  margin-left: 3rem;
+  text-align: right;
+}
+
+@media only screen and (max-width: 600px) {
+  .weather-container {
+  
+    margin-top:-3.7rem;
+  
+    }
+}
