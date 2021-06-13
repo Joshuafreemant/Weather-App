@@ -8,7 +8,7 @@ const APIURL = `https://goweather.herokuapp.com/weather/`;
 
 
 
-getWeatherByLocation('Lagos');
+getWeatherByLocation('Abuja');
 
 async function getWeatherByLocation(location) {
 
@@ -26,13 +26,10 @@ async function getWeatherByLocation(location) {
     // console.log('forecast', forecasts[0])
     // console.log(respData)
 
-    showData(respData)
-}
-function showData(weathers) {
 
-    // weathers.forEach((weather) => {
-    //     let{temperature,description,wind}=weather;
-    // });
+    
+
+    
     main.innerHTML='';
     const currentDate = new Date();
     let weekday = new Array(8);
@@ -52,22 +49,20 @@ function showData(weathers) {
     
 
     const currentDay = weekday[currentDate.getDay()+ 1];
-    const nextDay = weekday[currentDate.getDay() + 2];
+    const nextDay = weekday[currentDate.getDay() +2];
     const thirdDay = weekday[currentDate.getDay()+3 ];
-
     
     const weatherEl = document.createElement('div');
     weatherEl.classList.add('content');
    
-
-
     weatherEl.innerHTML = `
-   
+    <p class="p">${location}</p>
+    
     <i class="bigicon fas fa-cloud-moon"></i>
 
-    <h2>${weathers.temperature}</h2>
-    <h3>${weathers.wind}</h3>
-    <p>${weathers.description}</p>
+    <h2>${respData.temperature}</h2>
+    <h3>${respData.wind}</h3>
+    <p class="desc">${respData.description}</p>
   </div>
   
   <div class="bottom">
@@ -78,24 +73,26 @@ function showData(weathers) {
         <div>
 
           <a href="#">${currentDay}</a>
-          <h4><i class="fas fa-cloud-sun-rain"></i> ${weathers.forecast[0].temperature}</h4>
+          <h4><i class="fas fa-cloud-sun-rain"></i> ${respData.forecast[0].temperature}</h4>
         </div>
   
         <div>
           <a href="#">${nextDay}</a>
-          <h4><i class="fas fa-cloud-sun-rain"></i> ${weathers.forecast[1].temperature}</h4>
+          <h4><i class="fas fa-cloud-sun-rain"></i> ${respData.forecast[1].temperature}</h4>
         </div>
   
         <div>
           <a href="#">${thirdDay}</a>
-          <h4><i class="fas fa-cloud-sun-rain"></i> ${weathers.forecast[2].temperature}</h4>
+          <h4><i class="fas fa-cloud-sun-rain"></i> ${respData.forecast[2].temperature}</h4>
         </div>
       </div>
     </div>
     `;
     main.appendChild(weatherEl);
     
+
 }
+
 
 
 
