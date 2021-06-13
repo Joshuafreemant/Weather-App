@@ -40,18 +40,23 @@ overflow:hidden;
   align-items: center;
 }
 .weather-container .content .bigicon {
-  font-size: 6rem;
-  margin-top: 3rem;
+  font-size: 5.5rem;
+  margin-top: 1rem;
   font-weight: 600;
   color: #fff;
 }
 
 .weather-container .content h2 {
   font-family: inherit;
-  font-size: 4rem;
+  font-size: 3.5rem;
   margin: 0;
   font-weight: 600;
   color: #fff;
+}
+.desc{
+  font-weight: 600;
+  color: #fff;
+  margin-top:-2rem;
 }
 
 .weather-container .content h3 {
@@ -61,11 +66,11 @@ overflow:hidden;
   font-weight: 600;
   color: #fff;
 }
-.weather-container .content p {
+.weather-container .content .p {
   font-family: inherit;
   font-size: 1rem;
-  margin-top: -1rem;
-  font-weight: 700;
+  margin-top: 2rem;
+  font-weight: 500;
   color: #fff;
 }
 
